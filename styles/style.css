@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* initialize Acme font */
+@font-face {
+  font-family: 'Acme';
+  src: url(../fonts/Acme-Regular.ttf) format('truetype');
+}
+
+/* styles for main container */
+.container {
+  min-height: 100vh;
+  background-color: #1D976C;
+  background: -webkit-linear-gradient(to bottom,#93F9B9,#1D976C);
+  background: linear-gradient(to bottom,#93F9B9,#1D976C);
+}
+
+/* start styles for content block */
+.content {
+  width: 50%;
+  padding: .3rem;
+  margin: 5rem 0;
+  border-radius: .7rem;
+  border: 1px solid rgba(255,255,255,0.18);
+  font-family: 'Acme', sans-serif;
+  background-color: rgba(255,255,255,0.40);
+  box-shadow: 0 2px 12px 0 rgba(53,52,52,0.589);
+  --person-image-size: 15rem;
+  --person-p-font-size: 4.6rem;
+}
+
+@media screen and (max-width: 1180px) {
+  .content {
+    --person-image-size: 60%;
+    --person-p-font-size: 3rem;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .content {  --person-p-font-size: 2rem !important;  }
+}
+/* end */
+
+/* start styles for person-info */
+.content > .person-info { margin-bottom: .8rem; }
+
+.content > .person-info img {
+  max-height: var(--person-image-size);
+  max-width: var(--person-image-size);
+  border-radius: .5rem;
+  margin-top: .5rem;
+  margin-left: .5rem;
+  box-shadow: 2px 8px 12px rgba(39,39,39,0.63);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+	-webkit-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+  object-fit: cover;
+}
+
+.content > .person-info img:hover {
+	-webkit-transform: scale(.8);
+          transform: scale(.8);
+}
+
+.content > .person-info h1 {
+  margin: 0;
+  font-size: var(--person-p-font-size);
+  color: rgb(17,68,51);
+}
+/* end */
+
+/* start styles for content's sections */
+.content > .section { padding: .6rem; }
+
+.content > .section > .title, .content > .person-info h2 {
+  margin: 0;
+  padding-left: .9rem;
+  overflow: hidden;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  color: white;
+  background-color:rgb(62,190,148);
+}
+/* end */
+
+/*start styles for code exapmle section */
+.code-example pre {
+  overflow: auto;
+  background-color: rgb(29,39,29);
+  color: white;
+}
+
+.code-example code > .var-name { color: lightblue; }
+
+.code-example code > .keyword { color: rgb(95,95,168); }
+
+.code-example code > .function-name { color: rgb(255,198,55); }
+/* end */
+
+/* flex box classes */
+.d-flex { display: flex; }
+
+.flex-column {  flex-direction: column; }
+
+.flex-wrap { flex-wrap: wrap; }
+
+.justify-center { justify-content: center; }
+
+.justify-space-between { justify-content: space-between; }
+
+.align-items-center { align-items: center; }

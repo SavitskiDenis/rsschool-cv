@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML, CSS & Git Basics</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <main class="container d-flex justify-center">
+    <div class="content d-flex flex-column justify-center">
+      <header class="person-info d-flex justify-space-between align-items-center flex-wrap">
+        <img src="./images/person.jpg" alt="no image">
+        <div>
+          <h1>Dze<wbr>nis Sa<wbr>vit<wbr>ski</h1>
+          <h2>contacts</h2>
+          <ul>
+            <li>email:<wbr> random<wbr>.ssd<wbr>@yandex<wbr>.by</li>
+            <li>phone<wbr> number: (A1) +375-<wbr>44-<wbr>793-<wbr>18-<wbr>25</li>
+            <li><a href="https://vk.com/id136617300">vk page</a></li>
+          </ul>
+        </div>
+      </header>
+      <section class="education section">
+        <h2 class="title">education</h2>
+        <p>I graduated from the Belarusian-Russian university in 2020 (speciality is «Automated Data Processing Systems») and completed Mogilev .Net EPAM course in 2018.</p>
+      </section>
+      <section class="skills section">
+        <h2 class="title">skills</h2>
+        <p>Programming</p>
+        <ul>
+          <li>Java at the basic level</li>
+          <li>C# at the basic level</li>
+          <li>HTML and CSS at the basic level</li>
+          <li>Java<wbr>Script at the basic level</li>
+          <li>Vue frame<wbr>work at the basic level</li>
+        </ul>
+        <p>English level: A2</p>
+      </section>
+      <section class="about-me section">
+        <h2 class="title">about me</h2>
+        <p>My goal is to be a really good programmer and constantly improve my skills. I think that my main qualities are purposefulness and hard work.</p>
+      </section>
+      <section class="code-example section">
+        <h2 class="title">code example</h2>
+        <pre><code>
+          <span class="keyword">function</span> <span class="function-name">findShort</span> (<span class="var-name">s</span>) {
+            <span class="keyword">const</span> <span class="var-name">arr</span> = <span class="var-name">s</span>.<span class="function-name">split</span>(' ');
+            <span class="keyword">let</span> <span class="var-name">minLength</span> = <span class="var-name">arr</span>[0].<span class="var-name">length</span>;
+            <span class="var-name">arr</span>.<span class="function-name">forEach</span>(<span class="var-name">el</span> => {
+              <span class="var-name">minLength</span> = <span class="var-name">minLength</span> > <span class="var-name">el</span>.<span class="var-name">length</span> ? <span class="var-name">el</span>.<span class="var-name">length</span> : <span class="var-name">minLength</span>
+            });
+            <span class="keyword">return</span> <span class="var-name">minLength</span>;
+          }
+        </code></pre>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
